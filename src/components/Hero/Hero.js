@@ -1,10 +1,13 @@
+import styles from './Hero.module.scss'
+
 const Hero = () => {
   return (
-    <div>
-      <h1>Successfully track your progress!</h1>
-      <p>With help of a simple to-do app, with lists, columns and card</p>
+    <div className={styles.hero}>
+      <h1 className={styles.title}>My first React App</h1>
+      <p className={styles.subtitle}>A simple to-do app, with lists, columns and card</p>
     </div>
   );
 };
+
 
 export default Hero;
