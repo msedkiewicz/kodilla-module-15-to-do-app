@@ -1,6 +1,6 @@
 import styles from "./List.module.scss";
 import Column from "../Column/Column";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import shortid from 'shortid';
 
 const List = () => {
