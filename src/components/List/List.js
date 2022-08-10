@@ -1,12 +1,21 @@
 import styles from "./List.module.scss";
 import Column from "../Column/Column";
+import { useState, useEffect } from "react";
 
 const List = () => {
-  const columns = [
-    { id: 1, title: "Books", icon: "book" },
-    { id: 2, title: "Coding", icon: "code" },
-    { id: 3, title: "Handcfart", icon: "camera" },
-  ];
+  const [columns, setColumns] = useState([
+    { id: 1, title: 'Books', icon: 'book' },
+    { id: 2, title: 'Movies', icon: 'film' },
+    { id: 3, title: 'Games', icon: 'gamepad' }
+]);
+
+useEffect(() => {
+
+  setTimeout(() => {
+      setColumns([...columns, { id: 4, title: 'Test column'}]);
+  }, 2000);
+
+}, []);
 
   return (
     <div className={styles.list}>
