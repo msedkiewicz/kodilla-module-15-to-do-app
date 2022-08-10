@@ -9,9 +9,9 @@ const List = () => {
       </header>
       <p className={styles.description}>My personal bucket list</p>
       <section className={styles.columns}>
-        <Column title="Books" />
-        <Column title="Coding" />
-        <Column title="Handcraft" />
+        <Column title="Books" icon="book" />
+        <Column title="Coding" icon="code" />
+        <Column title="Handcraft" icon="camera" />
       </section>
     </div>
   );
