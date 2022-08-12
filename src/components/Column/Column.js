@@ -1,4 +1,5 @@
 import styles from "./Column.module.scss";
+import Card from "../Card/Card";
 
 const Column = (props) => {
   return (
@@ -9,7 +10,7 @@ const Column = (props) => {
       </h3>
       <ul className={styles.cards}>
         {props.cards.map((card) => (
-          <li key={card.id}>{card.title}</li>
+          <Card key={card.id} title={card.title} />
         ))}
       </ul>
     </article>
