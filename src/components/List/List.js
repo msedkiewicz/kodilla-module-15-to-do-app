@@ -10,9 +10,12 @@ const List = () => {
     { id: 2, title: "Movies", icon: "film" },
     { id: 3, title: "Games", icon: "gamepad" },
   ]);
-  const addColumn = newColumn => {
-		setColumns([...columns, { id: shortid(), title: newColumn.title }]);
-};
+  const addColumn = (newColumn) => {
+    setColumns([
+      ...columns,
+      { id: shortid(), title: newColumn.title, icon: newColumn.icon },
+    ]);
+  };
   return (
     <div className={styles.list}>
       <header className={styles.header}>
