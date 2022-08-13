@@ -12,7 +12,7 @@ const List = () => {
       icon: "book",
       cards: [
         { id: 1, title: "Pomnik Cesarzowej Achai" },
-        { id: 1, title: "Szogun" },
+        { id: 2, title: "Szogun" },
       ],
     },
     {
@@ -21,7 +21,7 @@ const List = () => {
       icon: "code",
       cards: [
         { id: 1, title: "JavaScript" },
-        { id: 1, title: "Python" },
+        { id: 2, title: "Python" },
       ],
     },
     {
@@ -30,7 +30,7 @@ const List = () => {
       icon: "camera",
       cards: [
         { id: 1, title: "Skrzynia skarbów" },
-        { id: 1, title: "Pudełko na kosmetyki do łazienki" },
+        { id: 2, title: "Pudełko na kosmetyki do łazienki" },
       ],
     },
   ]);
