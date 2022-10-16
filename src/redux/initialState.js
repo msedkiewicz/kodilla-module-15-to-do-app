@@ -25,6 +25,8 @@ const initialState = {
     { id: 5, columnId: 3, title: "Skrzynia skarbów" },
     { id: 6, columnId: 3, title: "Pudełko na kosmetyki do łazienki" },
   ],
+
+  searchString: '', // why here, not separately?
 };
 
 export default initialState;
