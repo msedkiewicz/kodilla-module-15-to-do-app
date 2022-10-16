@@ -15,7 +15,7 @@ const reducer = (state, action) => {
         cards: [...state.cards, { ...action.payload, id: shortid() }],
       };
     case "UPDATE_SEARCHSTRING":
-      return {...state, searchString:action.payload}; // why such construction? why state?
+      return {...state, searchString:action.payload};
     default:
       return state;
   }

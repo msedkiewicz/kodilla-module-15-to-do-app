@@ -26,7 +26,7 @@ const initialState = {
     { id: 6, columnId: 3, title: "Pudełko na kosmetyki do łazienki" },
   ],
 
-  searchString: '', // why here, not separately?
+  searchString: '', // why here, not separately? Is it because we need to access other data from same state? or it's just a construction to thor everything in one place?
 };
 
 export default initialState;
