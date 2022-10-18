@@ -5,11 +5,11 @@ import { BrowserRouter } from "react-router-dom";
 
 const NavBar = () => {
     return (
-      <nav>
+      <nav className={styles.navigaton} >
         <Container>
         <BrowserRouter>
             <Link to="/"></Link>
-            <ul>
+            <ul className={styles.navigaton}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/favorite">Favorite</Link></li>
                 <li><Link to="/about">About</Link></li>
