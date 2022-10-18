@@ -1,7 +1,43 @@
-@import '../../styles/settings.scss';
+@import "../../styles/settings.scss";
 
+.navbar {
+  background-color: darken($color-dark, 3%);
+  margin-top: -20px;
+}
 .navigation {
-    background: red !important;//darken($color-dark, 3%);;
-    z-index: 10;
-    color: red !important;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  color: $color-light;
+}
+.navigation .icon {
+    margin: 25px 0 0 50px;
+    font-size: 24px;
+}
+.navigation a {
+  color: $color-light;
+  text-decoration: none;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+}
+
+@media all and (max-width: 400px){
+    .navigation .icon {
+        margin: 25px 0 0 20px;
+    }
+    .navigation ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+}
+
+.navigation ul li {
+    padding: 10px;
 }
