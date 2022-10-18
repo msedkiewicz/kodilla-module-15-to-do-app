@@ -1,12 +1,13 @@
 import Container from "../Container/Container";
 import NavBar from "../NavBar/NavBar";
+import PageTitle from "../PageTitle/PageTitle";
 
 const Favourite = () => {
   return (
     <div>
       <NavBar />
       <Container>
-        <h2>Favourite</h2>
+        <PageTitle>Favourite</PageTitle>
         <p>Lorem ipsum</p>
       </Container>
     </div>
