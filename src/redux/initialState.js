@@ -2,13 +2,13 @@ const initialState = {
   lists: [
     {
       id: 1,
-      title: 'My bucket list',
-      description: 'Interesting things I want to check out'
+      title: 'To do soon!',
+      description: 'Interesting things I want to check out.'
     },
    {
       id: 2,
       title: 'Keepin Zen list',
-      description: 'Ways of staying calm'
+      description: 'Ways of staying calm.'
    }
  ],
   columns: [
