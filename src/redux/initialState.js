@@ -7,7 +7,7 @@ const initialState = {
     },
    {
       id: 2,
-      title: 'Keepin Zen list',
+      title: 'Staying Zen list',
       description: 'Ways of staying calm.'
    }
  ],
