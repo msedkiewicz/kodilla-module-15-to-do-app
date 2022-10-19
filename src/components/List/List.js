@@ -4,10 +4,12 @@ import ColumnForm from "../ColumnForm/ColumnForm";
 import { useSelector } from "react-redux";
 import { getColumnsByList, getListById } from "../../redux/store";
 import NavBar from "../NavBar/NavBar";
+import { useParams } from 'react-router';
 
 const List = () => {
-  const columns = useSelector((state) => getColumnsByList(state, 1)); // jw
-  const listData = useSelector((state) => getListById(state, 1)); // hm?
+  const { listId } = useParams();
+  const columns = useSelector((state) => getColumnsByList(state, listId)); // jw
+  const listData = useSelector((state) => getListById(state, listId)); // hm?
   return (
     <>
     <NavBar />
