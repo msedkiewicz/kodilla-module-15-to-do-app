@@ -1,6 +1,6 @@
 @import '../../styles/settings.scss';
 
-.columnForm {
+.listForm {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 }
 
 @media all and (max-width: 690px){
-    .columnForm {
+    .listForm {
         flex-direction: column;
     }
 }
