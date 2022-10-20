@@ -18,6 +18,7 @@ export const getAllLists = (state) => state.lists;
 export const searchInputValue = (state) => state.searchString;
 
 // action creators
+export const addList = (payload) => ({ type: "ADD_LIST", payload });
 export const addColumn = (payload) => ({ type: "ADD_COLUMN", payload });
 export const addCard = (payload) => ({ type: "ADD_CARD", payload });
 export const updateSearchString = (payload) => ({
@@ -28,6 +29,11 @@ export const updateSearchString = (payload) => ({
 //data
 const reducer = (state, action) => {
   switch (action.type) {
+    case "ADD_LIST":
+      return {
+        ...state,
+        lists: [...state.lists, { ...action.payload, id: shortid() }],
+      };
     case "ADD_COLUMN":
       return {
         ...state,
