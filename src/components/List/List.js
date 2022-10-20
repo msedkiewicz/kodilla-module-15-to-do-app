@@ -4,13 +4,14 @@ import ColumnForm from "../ColumnForm/ColumnForm";
 import { useSelector } from "react-redux";
 import { getColumnsByList, getListById } from "../../redux/store";
 import NavBar from "../NavBar/NavBar";
-import { useParams } from 'react-router';
+import { useParams, Navigate } from 'react-router';
 import SearchForm from "../SearchForm/SearchForm";
 
 const List = (props) => {
   const { listId } = useParams();
   const columns = useSelector((state) => getColumnsByList(state, listId)); // jw
   const listData = useSelector((state) => getListById(state, listId)); // hm?
+  if(!listData) return <Navigate to="/" />
   return (
     <>
     <NavBar />
