@@ -18,7 +18,7 @@ const ListForm = () => {
     setDescription("");
   };
   return (
-    <form className={styles.columnForm} onSubmit={handleSubmit}>
+    <form className={styles.listForm} onSubmit={handleSubmit}>
       Title:
       <div className={styles.padding}>
         <TextInput
