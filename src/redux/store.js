@@ -16,6 +16,7 @@ export const getColumnsByList = ({ columns }, listId) =>
   columns.filter((column) => column.listId === listId); // koństrukcja
 export const getAllLists = (state) => state.lists;
 export const searchInputValue = (state) => state.searchString;
+export const getFavouriteCard = state => state.cards.filter(card => card.isFavourite === true);
 
 // action creators
 export const addList = (payload) => ({ type: "ADD_LIST", payload });
