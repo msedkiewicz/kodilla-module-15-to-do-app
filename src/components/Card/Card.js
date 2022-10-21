@@ -21,7 +21,7 @@ const Card = (props) => {
       {props.title}{" "}
       <button
         onClick={handleClick}
-        className={clsx(styles.button, props.isFavorite && styles.isActive)}
+        className={clsx(styles.button, props.isFavourite && styles.isActive)}
       >
         <span className={"fa fa-star-o"} />
       </button>
