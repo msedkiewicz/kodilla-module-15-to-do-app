@@ -15,10 +15,10 @@ const Column = (props) => {
       </h3>
       <ul className={styles.cards}>
         {cards.map((card) => (
-          <Card key={card.id} title={card.title} />
+          <Card key={card.id} title={card.title} isFavourite={card.isFavourite} cardId={card.id}/>
         ))}
       </ul>
-      <CardForm columnId={props.id}/>
+      <CardForm columnId={props.id} />
     </article>
   );
 };
