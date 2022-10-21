@@ -6,9 +6,8 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <Container>
         <div className={styles.navigation}>
-          <i className={styles.icon + " fa fa-tasks"} aria-hidden="true">
+          <Link to="/"><i className={styles.icon + " fa fa-tasks"} aria-hidden="true"></i></Link>
             <Link to="/" />
-          </i>
           <ul>
             <li>
               <NavLink
