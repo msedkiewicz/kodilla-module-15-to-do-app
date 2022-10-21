@@ -27,8 +27,8 @@ export const updateSearchString = (payload) => ({
   type: "UPDATE_SEARCHSTRING",
   payload,
 });
-export const toggleCardFavorite = (payload) => ({
-  type: "TOGGLE_CARD_FAVORITE",
+export const toggleCardFavourite = (payload) => ({
+  type: "TOGGLE_CARD_FAVOURITE",
   payload,
 });
 
