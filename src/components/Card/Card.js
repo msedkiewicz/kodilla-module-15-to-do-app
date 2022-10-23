@@ -23,7 +23,7 @@ const Card = (props) => {
         onClick={handleClick}
         className={clsx(styles.button, props.isFavourite && styles.isActive)}
       >
-        <span className={"fa fa-star-o"} />
+        <i className={"fa fa-star"} />
       </button>
     </li>
   );
