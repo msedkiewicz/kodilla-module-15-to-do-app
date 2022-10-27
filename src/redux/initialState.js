@@ -65,7 +65,7 @@ const initialState = {
     { id: "8", columnId: "4", title: "Nightwish", isFavourite: false },
   ],
 
-  searchString: "", // why here, not separately? Is it because we need to access other data from same state? or it's just a construction to thor everything in one place?
+  searchString: "",
 };
 
 export default initialState;
