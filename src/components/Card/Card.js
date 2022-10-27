@@ -14,7 +14,7 @@ const Card = (props) => {
     e.preventDefault();
     setFavouriteValue(!favouriteValue);
     dispatch(toggleCardFavourite(cardId));
-  }; // omówić
+  };
 
   return (
     <li className={styles.card}>

@@ -11,9 +11,9 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
   );
 export const getAllColumns = (state) => state.columns;
 export const getListById = ({ lists }, listId) =>
-  lists.find((list) => list.id === listId); // koństrukcja...
+  lists.find((list) => list.id === listId);
 export const getColumnsByList = ({ columns }, listId) =>
-  columns.filter((column) => column.listId === listId); // koństrukcja
+  columns.filter((column) => column.listId === listId);
 export const getAllLists = (state) => state.lists;
 export const searchInputValue = (state) => state.searchString;
 export const getFavouriteCard = (state) =>
@@ -60,7 +60,7 @@ const reducer = (state, action) => {
             ? { ...card, isFavourite: !card.isFavourite }
             : card
         ),
-      }; // omówić!
+      };
     default:
       return state;
   }

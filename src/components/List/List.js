@@ -9,8 +9,8 @@ import SearchForm from "../SearchForm/SearchForm";
 
 const List = (props) => {
   const { listId } = useParams();
-  const columns = useSelector((state) => getColumnsByList(state, listId)); // jw
-  const listData = useSelector((state) => getListById(state, listId)); // hm?
+  const columns = useSelector((state) => getColumnsByList(state, listId));
+  const listData = useSelector((state) => getListById(state, listId));
   if(!listData) return <Navigate to="/" />
   return (
     <>

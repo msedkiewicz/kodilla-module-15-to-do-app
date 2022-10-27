@@ -3,5 +3,3 @@ function strContains(a,b) {
 }
 
 export default strContains;
-
-// omówić!

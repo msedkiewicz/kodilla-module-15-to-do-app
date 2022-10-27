@@ -7,7 +7,7 @@ import { updateSearchString, searchInputValue } from "../../redux/store";
 
 const SearchForm = (props) => {
   const currentSearchString = useSelector(searchInputValue);
-  const [searchValue, setSearchValue] = useState(currentSearchString); // why use state?
+  const [searchValue, setSearchValue] = useState(currentSearchString);
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const SearchForm = (props) => {
   };
   return (
     <form className={styles.searchForm}  onSubmit={handleSubmit}>
-      <TextInput placeholder="Search..." value={searchValue} onChange={e => setSearchValue(e.target.value)} /* construction ?*/ />
+      <TextInput placeholder="Search..." value={searchValue} onChange={e => setSearchValue(e.target.value)} />
       <Button>
         <span className="fa fa-search" />
       </Button>
