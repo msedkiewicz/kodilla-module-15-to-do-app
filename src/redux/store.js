@@ -2,6 +2,7 @@ import { createStore, combineReducers } from "redux";
 import initialState from "./initialState";
 import shortid from "shortid";
 import strContains from "../utils/strContains";
+import listsReducer from './listsReducer';
 
 //selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) =>
@@ -33,14 +34,6 @@ export const toggleCardFavourite = (payload) => ({
 });
 
 //data
-const listsReducer = (statePart = [], action) => {
-  switch (action.type) {
-    case "ADD_LIST":
-      return [...statePart, { ...action.payload, id: shortid() }];
-    default:
-      return statePart;
-  }
-};
 
 const columnsReducer = (statePart = [], action) => {
   switch (action.type) {
