@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from "redux";
 import initialState from "./initialState";
-import shortid from "shortid";
 import strContains from "../utils/strContains";
 import listsReducer from './listsReducer';
 import columnsReducer from "./columnsReducer";
+import cardsReducer from "./cardsReducer";
 import searchStringReducer from "./searchStringReducer";
 
 //selectors
@@ -37,21 +37,6 @@ export const toggleCardFavourite = (payload) => ({
 
 //data
 
-const cardsReducer = (statePart = [], action) => {
-  switch (action.type) {
-    case "ADD_CARD":
-      return [...statePart, { ...action.payload, id: shortid() }];
-    case "TOGGLE_CARD_FAVOURITE":
-      return statePart.map((card) =>
-        card.id === action.payload
-          ? { ...card, isFavourite: !card.isFavourite }
-          : card
-      );
-    default:
-      return statePart;
-  }
-};
-
 const subreducers = {
   lists: listsReducer,
   columns: columnsReducer,
@@ -60,6 +45,7 @@ const subreducers = {
 };
 
 const reducer = combineReducers(subreducers);
+
 const store = createStore(
   reducer,
   initialState,
