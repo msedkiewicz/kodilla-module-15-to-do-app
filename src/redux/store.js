@@ -5,16 +5,7 @@ import columnsReducer from "./columnsReducer";
 import cardsReducer from "./cardsReducer";
 import searchStringReducer from "./searchStringReducer";
 
-//selectors
-export const searchInputValue = (state) => state.searchString;
-
 // action creators
-export const updateSearchString = (payload) => ({
-  type: "UPDATE_SEARCHSTRING",
-  payload,
-});
-
-//data
 
 const subreducers = {
   lists: listsReducer,
