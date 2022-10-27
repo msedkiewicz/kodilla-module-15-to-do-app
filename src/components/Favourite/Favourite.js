@@ -28,6 +28,7 @@ const Favourite = () => {
             {favouriteCards.map((favouriteCard) => (
               <Card
                 key={favouriteCard.id}
+                cardId={favouriteCard.id}
                 title={favouriteCard.title}
                 isFavourite={favouriteCard.isFavourite}
               />
