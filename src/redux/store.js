@@ -3,6 +3,7 @@ import initialState from "./initialState";
 import shortid from "shortid";
 import strContains from "../utils/strContains";
 import listsReducer from './listsReducer';
+import searchStringReducer from "./searchStringReducer";
 
 //selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) =>
@@ -59,14 +60,6 @@ const cardsReducer = (statePart = [], action) => {
   }
 };
 
-const searchStringReducer = (statePart = "", action) => {
-  switch (action.type) {
-    case "UPDATE_SEARCHSTRING":
-      return action.payload;
-    default:
-      return statePart;
-  }
-};
 const subreducers = {
   lists: listsReducer,
   columns: columnsReducer,
