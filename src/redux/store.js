@@ -6,13 +6,9 @@ import cardsReducer from "./cardsReducer";
 import searchStringReducer from "./searchStringReducer";
 
 //selectors
-export const getAllColumns = (state) => state.columns;
-export const getColumnsByList = ({ columns }, listId) =>
-  columns.filter((column) => column.listId === listId);
 export const searchInputValue = (state) => state.searchString;
 
 // action creators
-export const addColumn = (payload) => ({ type: "ADD_COLUMN", payload });
 export const updateSearchString = (payload) => ({
   type: "UPDATE_SEARCHSTRING",
   payload,

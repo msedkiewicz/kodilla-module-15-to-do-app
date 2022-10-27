@@ -2,7 +2,7 @@ import styles from "./List.module.scss";
 import Column from "../Column/Column";
 import ColumnForm from "../ColumnForm/ColumnForm";
 import { useSelector } from "react-redux";
-import { getColumnsByList} from "../../redux/store";
+import { getColumnsByList} from "../../redux/columnsReducer";
 import { getListById } from "../../redux/listsReducer";
 import NavBar from "../NavBar/NavBar";
 import { useParams, Navigate } from 'react-router';
