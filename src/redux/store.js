@@ -34,37 +34,16 @@ export const toggleCardFavourite = (payload) => ({
 
 //data
 const reducer = (state, action) => {
-  switch (action.type) {
-    case "ADD_LIST":
-      return {
-        ...state,
-        lists: [...state.lists, { ...action.payload, id: shortid() }],
-      };
-    case "ADD_COLUMN":
-      return {
-        ...state,
-        columns: [...state.columns, { ...action.payload, id: shortid() }],
-      };
-    case "ADD_CARD":
-      return {
-        ...state,
-        cards: [...state.cards, { ...action.payload, id: shortid() }],
-      };
-    case "UPDATE_SEARCHSTRING":
-      return { ...state, searchString: action.payload };
-    case "TOGGLE_CARD_FAVOURITE":
-      return {
-        ...state,
-        cards: state.cards.map((card) =>
-          card.id === action.payload
-            ? { ...card, isFavourite: !card.isFavourite }
-            : card
-        ),
-      };
-    default:
-      return state;
-  }
+  const newState = {
+    lists: listsReducer(state.lists, action),
+    columns: columnsReducer(state.columns, action),
+    cards: cardsReducer(state.cards, action),
+    searchString: searchStringReducer(state.searchString, action)
+  };
+
+  return newState;
 };
+
 
 const listsReducer = (statePart = [], action) => {
   switch(action.type) {
