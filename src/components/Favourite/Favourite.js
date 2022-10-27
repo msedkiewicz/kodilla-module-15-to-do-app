@@ -8,6 +8,16 @@ import Card from "../Card/Card";
 
 const Favourite = () => {
   const favouriteCards = useSelector(getFavouriteCard);
+  if (favouriteCards.length === 0) {
+    return (
+      <>
+        <NavBar />
+        <Container>
+          <PageTitle>You don't have any favourite cards.</PageTitle>
+        </Container>
+      </>
+    );
+  }
   return (
     <>
       <NavBar />
