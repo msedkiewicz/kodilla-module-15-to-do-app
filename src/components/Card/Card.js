@@ -25,19 +25,17 @@ const Card = (props) => {
   return (
     <li className={styles.card}>
       {props.title}{" "}
-      <button
-        onClick={toggleFavourite}
-        className={clsx(styles.button, props.isFavourite && styles.isActive)}
-      >
-        <i className={"fa fa-star"} />
-      </button>
-      <button
-        onClick={deleteCard}
-        className={styles.button}
-      >
-        <i className={"fa fa-trash"} />
-      </button>
-
+      <div className={styles.buttons}>
+        <button
+          onClick={toggleFavourite}
+          className={clsx(styles.button, props.isFavourite && styles.isActive)}
+        >
+          <i className={"fa fa-star"} />
+        </button>
+        <button onClick={deleteCard} className={styles.button}>
+          <i className={"fa fa-trash"} />
+        </button>
+      </div>
     </li>
   );
 };
