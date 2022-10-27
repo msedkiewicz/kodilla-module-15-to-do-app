@@ -3,6 +3,7 @@ import initialState from "./initialState";
 import shortid from "shortid";
 import strContains from "../utils/strContains";
 import listsReducer from './listsReducer';
+import columnsReducer from "./columnsReducer";
 import searchStringReducer from "./searchStringReducer";
 
 //selectors
@@ -35,15 +36,6 @@ export const toggleCardFavourite = (payload) => ({
 });
 
 //data
-
-const columnsReducer = (statePart = [], action) => {
-  switch (action.type) {
-    case "ADD_COLUMN":
-      return [...statePart, { ...action.payload, id: shortid() }];
-    default:
-      return statePart;
-  }
-};
 
 const cardsReducer = (statePart = [], action) => {
   switch (action.type) {
